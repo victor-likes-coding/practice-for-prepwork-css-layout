@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="layout.css">
+        <link rel="stylesheet" type="text/css" href="layout.css" />
     </head>
     <body>
-        <form action="/form-handling-url" method="post">
-            <fieldset>
-            <legend>Add user</legend>
-        
-            <div>
-                <label for="firstName">First name</label>
-                <input type="text" id="firstName" name="first_name">
-            </div>
-        
-            <div>
-                <label for="lastName">Last name</label>
-                <input type="text" id="lastName" name="last_name">
-            </div>
-        
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email_address">
-            </div>
-        
-            <div>
-                <label for="role">Status</label>
-                <select id="role" name="user_role_name">
-                <option value="student">Student</option>
-                <option value="instructor">Instructor</option>
-                <option value="guest">Guest</option>
-                </select>
-            </div>
-            
-            <div>
-                <p>Choose your favorite Web language:</p>
-                <input type="radio" id="html" name="fav_language" value="HTML">
-                <label for="html">HTML</label><br>
-                <input type="radio" id="css" name="fav_language" value="CSS">
-                <label for="css">CSS</label><br>
-                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                <label for="javascript">JavaScript</label>
-            </div>
+        <form action="/form-handling-url" method="post" class="form">
+            <fieldset class="form__container">
+                <legend class="form__legend">add user</legend>
 
-            <div>
-                <label for="comments">Comments</label>
-                <textarea id="comments" name="comments"></textarea>
-            </div>
+                <div class="form__ui">
+                    <div class="form__group">
+                        <label for="firstName">First name:</label>
+                        <input type="text" id="firstName" name="first_name" />
+                    </div>
 
-            <div>
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date">
-            </div>
+                    <div class="form__group">
+                        <label for="lastName">Last name:</label>
+                        <input type="text" id="lastName" name="last_name" />
+                    </div>
 
-            <div>
-                <input type="checkbox" id="signup" name="signup" value="Signup">
-                <label for="signup">Sign up for news letter</label><br>
-                <input type="checkbox" id="terms" name="terms" value="Terms">
-                <label for="terms"> Agree to terms and conditions</label>
-            </div>
-        
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-        
+                    <div class="form__group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email_address" />
+                    </div>
+
+                    <div class="form__group--column-2">
+                        <div class="form__group">
+                            <label for="role">Status:</label>
+                            <select id="role" name="user_role_name">
+                                <option value="student">Student</option>
+                                <option value="instructor">Instructor</option>
+                                <option value="guest">Guest</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" />
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <p>Choose your favorite Web language:</p>
+                        <div class="form__group--column-3">
+                            <div class="form__choice-groups">
+                                <input type="radio" id="html" name="fav_language" value="HTML" />
+                                <label for="html">HTML</label>
+                            </div>
+                            <div class="form__choice-groups">
+                                <input type="radio" id="css" name="fav_language" value="CSS" />
+                                <label for="css">CSS</label>
+                            </div>
+                            <div class="form__choice-groups">
+                                <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+                                <label for="javascript">JavaScript</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__group-left" for="comments">Comments:</label>
+                        <textarea id="comments" name="comments"></textarea>
+                    </div>
+
+                    <div class="form__group--column-2 tos">
+                        <input type="checkbox" id="signup" name="signup" value="Signup" />
+                        <label for="signup">Sign up for news letter</label><br />
+                        <input type="checkbox" id="terms" name="terms" value="Terms" />
+                        <label for="terms"> Agree to terms and conditions</label>
+                    </div>
+
+                    <div class="form__group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
             </fieldset>
         </form>
     </body>
